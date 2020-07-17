@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<!-- style css -->
+		<link rel="stylesheet" href="./CSS/style.css" />
+		<!-- google fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- font awesome -->
+		<script
+			src="https://kit.fontawesome.com/13e3243a35.js"
+			crossorigin="anonymous"
+		></script>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- navbar -->
+		<nav class="navbar navbar-expand-md">
+			<div class="container-fluid">
+				<!-- title  -->
+				<h1 class="navbar-title">COVID-19 Tracker</h1>
+			</div>
+		</nav>
+
+		<!-- end of navbar -->
+
+		<!-- title row -->
+		<div class="row mb-5">
+			<div class="col">
+				<h3>
+					<span class="text-uppercase text-danger">Dashboard /</span
+					><span class="text-muted small"> World</span>
+				</h3>
+			</div>
+		</div>
+		<!-- end of title row -->
+		<!-- cards row -->
+
+		<div class="row inform-card">
+			<div class="col-lg-3 col-md-6 col-10 mx-auto my-5">
+				<div class="card card-1">
+					<div class="card-body">
+						<div class="flex d-flex justify-content-between">
+							<i class="fa fa-lungs-virus body-icon"></i>
+							<div class="side-text align-self-center">
+								<h3>20 NEW</h3>
+								<h5>Orders</h5>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer d-flex justify-content-between">
+						<a
+							href="https://en.wikipedia.org/wiki/COVID-19_pandemic_by_country_and_territory"
+							>Learn More</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-10 mx-auto my-5">
+				<div class="card card-2">
+					<div class="card-body">
+						<div class="flex d-flex justify-content-between">
+							<i class="fas fa-lungs body-icon"></i>
+							<div class="side-text align-self-center">
+								<h3>20 NEW</h3>
+								<h5>Users</h5>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer d-flex justify-content-between">
+						<a
+							href="https://en.wikipedia.org/wiki/COVID-19_pandemic_by_country_and_territory"
+							>Learn More</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-10 mx-auto my-5">
+				<div class="card card-3">
+					<div class="card-body">
+						<div class="flex d-flex justify-content-between">
+							<i class="fas fa-lungs body-icon"></i>
+							<div class="side-text align-self-center">
+								<h3>20 NEW</h3>
+								<h5>Messages</h5>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer d-flex justify-content-between">
+						<a
+							href="https://en.wikipedia.org/wiki/COVID-19_pandemic_by_country_and_territory"
+							>Learn More</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-lg-6 my-5">
+				<div class="card">
+					<div id="regions_div"></div>
+				</div>
+			</div>
+			<!-- </div> -->
+			<div class="col-md-6 col-lg-6 my-5">
+				<div class="card">
+					<div class="cases-table-container">
+						<h4>Live Cases by Country</h4>
+						<div class="country-data">
+							<table class="table">
+								<tbody id="table-data"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- end of cards row -->
+
+		<!-- <div class="row">
+			<div class="col-lg-6"> -->
+		<!-- <div id="regions_div"></div>
+			</div> -->
+		<!-- <div class="col-lg-6">
+				>
+			</div>
+		</div> -->
+
+		<script
+			type="text/javascript"
+			src="https://www.gstatic.com/charts/loader.js"
+		></script>
+		<script src="./app.js"></script>
+	</body>
+</html>
