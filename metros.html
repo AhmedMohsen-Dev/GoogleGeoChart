@@ -20,13 +20,14 @@
 			rel="stylesheet"
   />
 	<script type="text/javascript"src="https://www.gstatic.com/charts/loader.js"></script>
-  
+  <script src="https://www.google.com/jsapi"></script>
 		<!-- font awesome -->
 		<script
 			src="https://kit.fontawesome.com/13e3243a35.js"
 			crossorigin="anonymous"
 		></script>
-		<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
+  
 		<title>Document</title>
 	</head>
 
@@ -214,32 +215,17 @@
         </div>
        </div>
       </div>
-      <!-- <div class="col-lg-3 col-md-6 col-10 mx-auto my-5">
-       <div class="card card-4">
-        <div class="card-body">
-         <div class="flex d-flex justify-content-between">
-          <i class="fa fa-suitcase body-icon"></i>
-          <div class="side-text align-self-center">
-           <h3>20 NEW</h3>
-           <h5>Orders</h5>
-          </div>
-         </div>
-        </div>
-        <div class="card-footer d-flex justify-content-between">
-         <a href="#">Learn More</a> <i class="fa fa-refresh"></i>
-        </div>
-       </div>
-      </div> -->
+
       <div class="container-fluid">
         <div class="row">
-        <div class="col ">
-          <div class="card">
+        <div class="col-md-6">
+          
            <div class="chart d-flex align-items-stretch">
            <div id="States_div"></div>
            </div>
-          </div>
+          
         </div>
-         <div class="col">
+         <div class="col-md-6">
           <div class="card ">
            <div class="cases-table-container ">
             <h4>Live Cases by States</h4>
@@ -265,11 +251,20 @@
    </div>
 
  <script src="./metros.js"></script>
- <script src="js/jquery-3.3.1.min.js"></script>
- <script>
-  $(".navbar-toggler").html(
-   <i class="fas fa-arrow-down fa-3x text-white"></i>
-  );
- </script>
+ <script src="./jquery-3.3.1.min.js"></script>
+  <!-- toggler button -->
+  <script>
+   $(".navbar-toggler").html(
+    '<i class="fa fa-arrow-down fa-3x text-white"></i>'
+   );
+  </script>
+  <!-- responsive map -->
+
+  <!-- Load Paul Irish’s Debounced resize plug -->
+  <script src="./debounce.js"></script>
+  <!-- Load JQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  
+  
 	</body>
 </html>
