@@ -18,17 +18,17 @@ body {
 }
 /*navbar */
 
-/* .navbar {
+.navbar {
 	border-top: 3px solid #f15025;
 	border-bottom: 3px solid #f15025;
-} */
+}
 
 .navbar .navbar-title {
 	color: #f15025;
 }
 
 .navbar {
-	/* background-color: #242a33; */
+	background-color: #242a33;
 }
 .cases-table-container h4 {
 	color: #6a5d5d;
@@ -63,7 +63,7 @@ body {
 /*sidebar*/
 
 .sidebar {
-	/* background-color: #242a33; */
+	background-color: #242a33;
 }
 
 .sidebar .nav-link,
@@ -109,9 +109,9 @@ body {
 	background-color: #f9dc5c;
 }
 
-.inform-card .card-4 {
+/* .inform-card .card-4 {
 	background-color: #3185fc;
-}
+} */
 
 .inform-card .card .body-icon {
 	font-size: 60px;
