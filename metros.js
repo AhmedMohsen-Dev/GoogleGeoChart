@@ -4,7 +4,7 @@ window.onload = () => {
 
 google.charts.load("current", {
 	packages: ["geochart"],
-	mapsApiKey: "AIzaSyBS5A8Rf6-2dLWdmSLKZMaNeMWX__t98ZM",
+	// mapsApiKey: "AIzaSyBS5A8Rf6-2dLWdmSLKZMaNeMWX__t98ZM",
 });
 google.charts.setOnLoadCallback(drawStatesMap);
 

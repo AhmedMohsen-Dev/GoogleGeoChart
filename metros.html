@@ -15,11 +15,7 @@
 		/>
 
 		<!-- JS, Popper.js, and jQuery -->
-		<script
-			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-			crossorigin="anonymous"
-		></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -31,7 +27,6 @@
 			crossorigin="anonymous"
 		></script>
 
-		<!-- <script src="js/jquery-3.3.1.min.js"></script> -->
 		<link rel="stylesheet" href="./CSS/style.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
@@ -43,13 +38,13 @@
 			src="https://www.gstatic.com/charts/loader.js"
 		></script>
 		<script src="https://www.google.com/jsapi"></script>
-
+    <script src="./js/script.js"></script>
 		<script
 			src="https://kit.fontawesome.com/13e3243a35.js"
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.js"></script>
-		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    
 
 		<script src="./metros.js"></script>
 
@@ -58,139 +53,58 @@
 
 	<body>
 		<!-- navbar -->
-		<nav class="navbar navbar-expand-md">
-			<div class="container-fluid">
-				<a class="navbar-brand text-uppercase" href="#"
-					><h1>COVID-19 Tracker</h1></a
-				>
-				<!-- Toggler/collapsibe Button -->
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#myNavbar"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<!-- Navbar links -->
-				<div class="collapse navbar-collapse justify-content-end" id="myNavbar">
-					<ul class="navbar-nav links d-md-none">
-						<li class="nav-item">
-							<a class="nav-link active" href="#"
-								><i class="fa fa-home text-muted mr-3"></i>Dashboard</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#"
-								><i class="fa fa-list mr-3 text-muted"></i>App</a
-							>
-						</li>
-
-						<li class="nav-item">
-							<a class="nav-link" href="#"
-								><i class="fa fa-envelope mr-3 text-muted"></i>Mailbox</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#"
-								><i class="fa fa-desktop mr-3 text-muted"></i>UI Elements</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#"
-								><i class="fa fa-envelope mr-3 text-muted"></i>Mailbox</a
-							>
-						</li>
-					</ul>
-
-					<!-- nav icons -->
-					<ul class="navbar-nav icons">
-						<li class="nav-item mr-4">
-							<a class="nav-link" href="#"> <i class="fa fa-search"></i> </a>
-						</li>
-						<li class="nav-item mr-4">
-							<a class="nav-link" href="#"> <i class="fa fa-bell icon"></i> </a>
-						</li>
-						<li class="nav-item mr-4">
-							<a class="nav-link" href="#">
-								<i class="fa fa-comment icon"></i>
-							</a>
-						</li>
-						<li class="nav-item mr-5">
-							<a class="nav-link" href="#">
-								<img
-									src="images/team-1.jpg"
-									class="img-fluid rounded-circle img-thumbnail"
-									alt="Logo"
-									style="width: 30px;"
-								/>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a
-								class="nav-link"
-								data-toggle="modal"
-								data-target="#sign-out"
-								href="#"
-							>
-								<i class="fa fa-sign-out"></i> Sign Out
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- end of nav -->
-
-		<!-- main content -->
-
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <a class="navbar-brand px-2 py-0" href="#">COVID-19 Tracker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link m-2 text-capitalize nav-active" href="#header">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link m-2 text-capitalize" href="#skills">World Map</a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link m-2 text-capitalize" href="#about">US Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link m-2 text-capitalize" href="#projects">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link m-2 text-capitalize" href="#posts">posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link m-2 text-capitalize" href="#reviews">reviews</a>
+          </li>
+        </ul>
+        <form>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Here....." />
+            <div class="input-group-append">
+              <button class="btn search-btn" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+      <!-- end of nav -->
+      <!-- main content -->
 		<div class="container-fluid">
-			<div class="video_container">
-				<video class="video_item" autoplay muted loop>
-					<source src="./Video/production ID_4096307.mp4" />
-					Your browser dose not support video tag
-				</video>
-			</div>
-			<div class="row">
-				<!-- <nav
-					class="col-md-3 col-lg-2 d-none d-md-block sidebar right-padding max-viewport"
-				>
-					<hr />
-					<ul class="navbar-nav flex-column">
-						<li class="nav-item">
-							<a class="nav-link active" href="#"
-								><i class="fa fa-home text-muted mr-3"></i>Dashboard</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#"
-								><i class="fa fa-map mr-3 text-muted"></i>States Map</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#"
-								><i class="fa fa-rss mr-3 text-muted"></i>RSS</a
-							>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#"
-								><i class="fa fa-tv mr-3 text-muted"></i>Videos</a
-							>
-						</li>
-					</ul>
-				</nav> -->
-				<!-- end of side bar -->
-				<!-- <div class="col-md-9 col-lg-10 py-5"> -->
-					<!-- title row -->
-					<!-- <div class="row mb-5">
-						<div class="col">
-							<h3>
-								<span class="text-uppercase text-danger">Dashboard /</span
-								><span class="text-muted small"> News</span>
-							</h3>
-						</div>
-					</div> -->
-					<!-- end of title row -->
+        <div class="video_container">
+          <video class="video_item" autoplay muted loop>
+            <source src="./Video/production ID_4096307.mp4" />
+            Your browser dose not support video tag
+          </video>
+        </div>
+		  	<div class="row">
 					<!-- cards row -->
 					<div class="row inform-card">
 						<div class="col-lg-3 col-md-6 col-10 mx-auto my-5">
@@ -329,26 +243,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- toggler button -->
-		<!-- <script>
-			$(".navbar-toggler").html(
-				<i class="fa fa-arrow-down fa-3x text-white"></i>
-			);
-		</script> -->
-		<!-- <script src="js/jquery-3.3.1.min.js"></script>
-		<script src="./metros.js"></script> -->
-
-		<!-- toggler button -->
-		<script>
-			$(".navbar-toggler").html(
-				'<i class="fa fa-arrow-down fa-3x text-white"></i>'
-			);
-		</script>
-		<!-- responsive map -->
-		<!-- Load JQuery -->
-		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-		<!-- Load Paul Irish’s Debounced resize plug -->
-		<!-- <script src="./debounce.js"></script> -->
+    </div>
+    
 	</body>
 </html>
