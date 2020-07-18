@@ -82,9 +82,7 @@ function drawStatesMap(region) {
 		region: "US",
 		displayMode: "regions",
 		resolution: "provinces",
-		width: "100%",
-		height: "100%",
-		backgroundColor: "#81d4fa",
+		backgroundColor: "none",
 		enableRegionInteractivity: "true",
 	};
 
@@ -94,3 +92,7 @@ function drawStatesMap(region) {
 
 	chart.draw(data, options);
 }
+
+$(window).resize(function () {
+	drawStatesMap();
+});
