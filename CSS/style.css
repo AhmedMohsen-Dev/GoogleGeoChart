@@ -18,26 +18,75 @@ body {
 }
 /*navbar */
 
-.navbar {
+/* .navbar {
 	border-top: 3px solid #f15025;
 	border-bottom: 3px solid #f15025;
-}
+} */
 
-.navbar-title {
+.navbar .navbar-title {
 	color: #f15025;
 }
 
 .navbar {
-	background-color: #242a33;
+	/* background-color: #242a33; */
 }
 .cases-table-container h4 {
 	color: #6a5d5d;
 	font-weight: 400;
 }
 
-#regions_div {
+.navbar .nav-link,
+.navbar .icons {
+	color: #687384;
+}
+
+.navbar .nav-link:hover,
+.navbar .icons:hover {
+	color: #fff;
+}
+
+.navbar .icon {
+	position: relative;
+}
+
+.navbar .icon::after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: 10px;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: #ef5350;
+}
+
+/*sidebar*/
+
+.sidebar {
+	/* background-color: #242a33; */
+}
+
+.sidebar .nav-link,
+.sidebar .navbar-brand {
+	color: #687384;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .navbar-brand:hover {
+	color: #fff;
+}
+.chart {
+	position: relative;
+	padding-bottom: 100%;
+	height: 0;
+	overflow: inherit;
+}
+#States_div {
 	width: 100%;
 	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
 }
 
 .country-data {
@@ -85,4 +134,19 @@ body {
 
 .inform-card .card-footer {
 	background: rgba(0, 0, 0, 0.5);
+}
+/* video  */
+.video_container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.video_item {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
