@@ -1,10 +1,10 @@
-window.onload = () => {
-	getCountryData();
-};
-google.charts.load("current", {
-	packages: ["geochart"],
-	// mapsApiKey: "AIzaSyBS5A8Rf6-2dLWdmSLKZMaNeMWX__t98ZM",
-});
+// window.onload = () => {
+// 	getCountryData();
+// };
+// google.charts.load("current", {
+// 	packages: ["geochart"],
+// mapsApiKey: "AIzaSyBS5A8Rf6-2dLWdmSLKZMaNeMWX__t98ZM",
+// });
 google.charts.setOnLoadCallback(drawWorldMap);
 
 const getCountryData = () => {
