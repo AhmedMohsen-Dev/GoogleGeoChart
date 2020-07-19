@@ -1,3 +1,15 @@
+$(window).resize(function () {
+	if (this.resizeTO) clearTimeout(this.resizeTO);
+	this.resizeTO = setTimeout(function () {
+		$(this).trigger("resizeEnd");
+	}, 500);
+});
+
+$(window).on("resizeEnd", function () {
+	drawStatesMap();
+	drawCountryMap();
+});
+
 window.onload = () => {
 	getStatesData();
 	getCountryData();
@@ -68,6 +80,9 @@ function drawCountryMap(world) {
 		geochartVersion: 10,
 		backgroundColor: "none",
 		enableRegionInteractivity: "true",
+		forceIFrame: "true",
+		keepAspectRatio: "true",
+		// width: "700px",
 	};
 
 	var chart = new google.visualization.GeoChart(
@@ -82,7 +97,7 @@ const showCountryDataInTable = (info_c) => {
 	info_c.forEach((country) => {
 		html += `
 								<tr>
-												<td><img src=${country.countryInfo.flag} height="20" width = "20">    ${country.country}</td>
+												<td><img src=${country.countryInfo.flag} height="20" width = "20"> ${country.country}</td>
 												<td>${country.cases}</td>
 												<td>${country.recovered}</td>
 												<td>${country.deaths}</td>

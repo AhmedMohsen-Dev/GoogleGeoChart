@@ -1,6 +1,6 @@
-$(window).resize(function () {
-	drawStatesMap();
-});
+// $(window).resize(function () {
+// 	drawStatesMap();
+// });
 
 $(document).ready(function () {
 	$(".navbar-toggler").click(function () {

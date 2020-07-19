@@ -51,88 +51,87 @@
 	</head>
 
 	<body>
-		<!-- navbar -->
-		<nav id="navbar" class="navbar navbar-expand-lg">
-			<a class="navbar-brand px-2 py-0" href="#">COVID-19 Tracker</a>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#myNavbar"
-			>
-				<div class="bar1"></div>
-				<div class="bar2"></div>
-				<div class="bar3"></div>
-			</button>
-
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="navbar-nav mx-auto">
-					<li class="nav-item">
-						<a class="nav-link m-2 text-capitalize nav-active" href="#header"
-							>Home</a
-						>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link m-2 text-capitalize" href="#skills">World Map</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link m-2 text-capitalize" href="#about">US Map</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link m-2 text-capitalize" href="#projects">Videos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link m-2 text-capitalize" href="#posts">posts</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link m-2 text-capitalize" href="#reviews">reviews</a>
-					</li>
-				</ul>
-				<form>
-					<div class="input-group">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Search Here....."
-						/>
-						<div class="input-group-append">
-							<button class="btn search-btn" type="button">
-								<i class="fas fa-search"></i>
-							</button>
-						</div>
+		<header id="home">
+			<!-- navbar -->
+			<nav id="navbar" class="navbar navbar-expand-lg">
+				<div class="container">
+					<a class="navbar-brand text-dark font-weight-bolder">
+						COVID-19 <span class="text-danger">Tracker</span>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#myNavbar"
+					>
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</button>
+					<div
+						class="collapse navbar-collapse justify-content-center"
+						id="myNavbar"
+					>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link m-2 text-capitalize nav-active" href="#home"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link m-2 text-capitalize" href="#world"
+									>World Map</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link m-2 text-capitalize" href="#USA">US Map</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link m-2 text-capitalize" href="#projects"
+									>Videos</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link m-2 text-capitalize" href="#posts">posts</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link m-2 text-capitalize" href="#reviews"
+									>reviews</a
+								>
+							</li>
+						</ul>
+						<form>
+							<div class="input-group">
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Search Here....."
+								/>
+								<div class="input-group-append">
+									<button class="btn search-btn" type="button">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
 					</div>
-				</form>
-			</div>
-		</nav>
+				</div>
+			</nav>
+		</header>
 		<!-- end of nav -->
-		<!-- main content -->
-		<div class="container-fluid">
-			<!-- <div class="video_container">
-				<video class="video_item" autoplay muted loop>
-					<source src="./Video/production ID_4096307.mp4" />
-					Your browser dose not support video tag
-				</video>
-			</div> -->
-			<div class="row justify-content-center">
-				<!-- cards row -->
+		<section id="world">
+			<div class="container justify-content-center">
 				<div class="row inform-card">
 					<div class="col-lg-3 col-md-6 col-8 mx-auto my-5">
 						<div class="card card-1">
 							<div class="card-body">
 								<div class="flex d-flex justify-content-between">
-									<i class="fa fa-lungs-virus body-icon"></i>
+									<i class="fa fa-lungs-virus body-icon-1"></i>
 									<div class="side-text align-self-center">
 										<h3>20 NEW</h3>
-										<h5>Orders</h5>
+										<h5>Confirmed</h5>
 									</div>
 								</div>
-							</div>
-							<div class="card-footer d-flex justify-content-between">
-								<a
-									href="https://en.wikipedia.org/wiki/COVID-19_pandemic_by_country_and_territory"
-									>Learn More</a
-								>
 							</div>
 						</div>
 					</div>
@@ -140,18 +139,12 @@
 						<div class="card card-2">
 							<div class="card-body">
 								<div class="flex d-flex justify-content-between">
-									<i class="fas fa-lungs body-icon"></i>
+									<i class="fas fa-lungs body-icon-2"></i>
 									<div class="side-text align-self-center">
 										<h3>20 NEW</h3>
-										<h5>Users</h5>
+										<h5>Recovered</h5>
 									</div>
 								</div>
-							</div>
-							<div class="card-footer d-flex justify-content-between">
-								<a
-									href="https://en.wikipedia.org/wiki/COVID-19_pandemic_by_country_and_territory"
-									>Learn More</a
-								>
 							</div>
 						</div>
 					</div>
@@ -159,109 +152,121 @@
 						<div class="card card-3">
 							<div class="card-body">
 								<div class="flex d-flex justify-content-between">
-									<i class="fas fa-users-slash body-icon"></i>
+									<i class="fas fa-users-slash body-icon-3"></i>
 									<div class="side-text align-self-center">
 										<h3>20 NEW</h3>
-										<h5>Messages</h5>
-									</div>
-								</div>
-							</div>
-							<div class="card-footer d-flex justify-content-between">
-								<a
-									href="https://en.wikipedia.org/wiki/COVID-19_pandemic_by_country_and_territory"
-									>Learn More</a
-								>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-8 mx-auto my-5">
-						<div class="card card-1">
-							<div class="card-body">
-								<div class="flex d-flex justify-content-between">
-									<i class="fa fa-lungs-virus body-icon"></i>
-									<div class="side-text align-self-center">
-										<h3>20 NEW</h3>
-										<h5>Orders</h5>
-									</div>
-								</div>
-							</div>
-							<div class="card-footer d-flex justify-content-between">
-								<a
-									href="https://en.wikipedia.org/wiki/COVID-19_pandemic_by_country_and_territory"
-									>Learn More</a
-								>
-							</div>
-						</div>
-					</div>
-					<div class="container-fluid">
-						<div class="row justify-content-center">
-							<div class="col-lg-6 align-items-start">
-								<div class="chart">
-									<div
-										class="map"
-										id="Country_div"
-										style="width: 700px; height: 500px;"
-									></div>
-								</div>
-							</div>
-							<div class="col-lg-6 mt-2 align-items-center">
-								<div class="card">
-									<div class="cases-table-container">
-										<h4>Live Cases by Countries</h4>
-										<div class="country-data d-flex">
-											<table class="table table-striped">
-												<thead>
-													<tr>
-														<th scope="col">Country</th>
-														<th scope="col">Total Cases</th>
-														<th scope="col">Total Recovered</th>
-														<th scope="col">Total Deaths</th>
-													</tr>
-												</thead>
-												<tbody id="Country-table-data"></tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="container-fluid">
-						<div class="row justify-content-center">
-							<div class="col-lg-6 align-items-start">
-								<div class="chart">
-									<div
-										class="map"
-										id="States_div"
-										style="width: 750px; height: 500px;"
-									></div>
-								</div>
-							</div>
-							<div class="col-lg-6 mt-2 align-items-center">
-								<div class="card">
-									<div class="cases-table-container">
-										<h4>Live Cases by States</h4>
-										<div class="country-data d-flex">
-											<table class="table table-striped">
-												<thead>
-													<tr>
-														<th scope="col">State</th>
-														<th scope="col">Cases</th>
-														<th scope="col">Deaths</th>
-													</tr>
-												</thead>
-												<tbody id="States-table-data"></tbody>
-											</table>
-										</div>
+										<h5>Deaths</h5>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!-- <div class="container"> -->
+				<div class="row justify-content-between">
+					<div class="col-lg-12 align-items-center">
+						<div class="card_map align-items-center">
+							<div id="Country_div"></div>
+						</div>
+					</div>
+					<div class="col-lg-12 mt-5">
+						<div class="card">
+							<div class="cases-table-container">
+								<h4>Live Cases by Countries</h4>
+								<div class="country-data d-flex">
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th class="table-info" scope="col">Country</th>
+												<th scope="col">Total Cases</th>
+												<th scope="col">Total Recovered</th>
+												<th scope="col">Total Deaths</th>
+											</tr>
+										</thead>
+										<tbody id="Country-table-data"></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- </div> -->
 			</div>
-		</div>
-		<script src="./js/debounce.js"></script>
-		<!-- </div>   -->
+		</section>
+		<section id="USA">
+			<div class="container justify-content-center">
+				<div class="row inform-card mt-10">
+					<div class="col-lg-3 col-md-6 col-8 mx-auto my-5">
+						<div class="card card-1">
+							<div class="card-body">
+								<div class="flex d-flex justify-content-between">
+									<i class="fa fa-lungs-virus body-icon-1"></i>
+									<div class="side-text align-self-center">
+										<h3>20 NEW</h3>
+										<h5>Confirmed</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-8 mx-auto my-5">
+						<div class="card card-2">
+							<div class="card-body">
+								<div class="flex d-flex justify-content-between">
+									<i class="fas fa-lungs body-icon-2"></i>
+									<div class="side-text align-self-center">
+										<h3>20 NEW</h3>
+										<h5>Recovered</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-8 mx-auto my-5">
+						<div class="card card-3">
+							<div class="card-body">
+								<div class="flex d-flex justify-content-between">
+									<i class="fas fa-users-slash body-icon-3"></i>
+									<div class="side-text align-self-center">
+										<h3>20 NEW</h3>
+										<h5>Deaths</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-12 align-items-center">
+						<div class="card_map align-items-center">
+							<div id="States_div"></div>
+						</div>
+					</div>
+					<div class="col-lg-12 mt-2">
+						<div class="card">
+							<div class="cases-table-container">
+								<h4>Live Cases by States</h4>
+								<div class="country-data">
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th class="table-info" scope="col">State</th>
+												<th scope="col">Cases</th>
+												<th scope="col">Deaths</th>
+											</tr>
+										</thead>
+										<tbody id="States-table-data"></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+			<!-- </div> -->
+			<!-- </div> -->
+		</section>
+		<!-- <script src="./js/debounce.js"></script> -->
 	</body>
 </html>
