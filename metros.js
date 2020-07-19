@@ -82,8 +82,7 @@ const showCountryDataInTable = (info_c) => {
 	info_c.forEach((country) => {
 		html += `
 								<tr>
-												<td><img src=${country.countryInfo.flag} height="20" width = "20"></td>
-            <td>${country.country}</td>
+												<td><img src=${country.countryInfo.flag} height="20" width = "20">    ${country.country}</td>
 												<td>${country.cases}</td>
 												<td>${country.recovered}</td>
 												<td>${country.deaths}</td>

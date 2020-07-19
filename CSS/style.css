@@ -149,7 +149,7 @@ body {
 /*inform-card*/
 
 .inform-card .card-1 {
-	background-color: #403f4c;
+	background-color: rgb(255, 245, 245);
 }
 
 .inform-card .card-2 {
@@ -157,7 +157,7 @@ body {
 }
 
 .inform-card .card-3 {
-	background-color: #f9dc5c;
+	background-color: #e2e8f0;
 }
 
 .inform-card .card .body-icon {
@@ -172,7 +172,7 @@ body {
 
 .inform-card .card a:hover {
 	text-decoration: none;
-	color: #fff;
+	color: #e53e3e;
 }
 
 .inform-card .card {
@@ -180,7 +180,8 @@ body {
 }
 
 .inform-card .card-footer {
-	background: rgba(0, 0, 0, 0.5);
+	background: rgb(254, 215, 215);
+	color: #e53e3e;
 }
 /* video  */
 .video_container {
