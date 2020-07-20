@@ -29,23 +29,6 @@ body {
 	padding: 2px 20px;
 }
 
-/* .navbar-brand {
-	color: #2a9134;
-	border: 3px solid #2a9134;
-	font-size: 30px;
-	transition: all 2s;
-} */
-
-/* .navbar-brand:hover {
-	background: #2a9134;
-	color: #242424;
-} */
-
-/* .navbar-toggler {
-	border: 3px solid #2a9134;
-	padding: 3px;
-} */
-
 .bar1,
 .bar2,
 .bar3 {
@@ -128,18 +111,12 @@ body {
 	background-color: #ef5350;
 }
 
-.card_map {
-	/* position: relative; */
-}
-
 #Country_div {
-	/* position: absolute; */
 	height: 95%;
 	width: 95%;
 }
 
 #States_div {
-	/* position: absolute; */
 	height: 95%;
 	width: 95%;
 }
@@ -148,6 +125,13 @@ body {
 	margin-top: 20px;
 	overflow: scroll;
 	height: 500px;
+}
+
+.card_chart {
+	/* position: relative; */
+	margin: auto;
+	height: 40vh;
+	width: 30vw;
 }
 
 /*inform-card*/

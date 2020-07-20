@@ -13,6 +13,9 @@ $(window).on("resizeEnd", function () {
 window.onload = () => {
 	getStatesData();
 	getCountryData();
+	// getCountryHistoricalData();
+	getWorldCoronaData();
+	// getUSACoronaData();
 };
 
 google.charts.load("current", {
@@ -33,7 +36,7 @@ const getCountryData = () => {
 			showCountryDataOnMap(info_c);
 			showCountryDataInTable(info_c);
 			drawCountryMap(info_c);
-			console.log(info_c);
+			// console.log(info_c);
 		});
 };
 
@@ -47,7 +50,7 @@ const showCountryDataOnMap = (info_c) => {
 			Recovered: table.recovered,
 		};
 	});
-	console.log(world);
+	// console.log(world);
 };
 
 function addColumns(dataTable) {
@@ -118,7 +121,7 @@ const getStatesData = () => {
 			showStatesDataOnMap(info_s);
 			showStatesDataInTable(info_s);
 			drawStatesMap(info_s);
-			console.log(info_s);
+			// console.log(info_s);
 		});
 };
 
@@ -132,7 +135,7 @@ const showStatesDataOnMap = (info_s) => {
 		};
 	});
 
-	console.log(state);
+	// console.log(state);
 };
 
 function addStatesColumns(dataTable) {
@@ -154,7 +157,7 @@ function addStatesRow(dataTable, row) {
 
 function drawStatesMap(state) {
 	var x = state.length;
-	console.log(x);
+	// console.log(x);
 	var data = new google.visualization.DataTable();
 	addStatesColumns(data);
 	for (var i = 0; i < x; i++) {
@@ -189,3 +192,96 @@ const showStatesDataInTable = (info_s) => {
 	});
 	document.getElementById("States-table-data").innerHTML = html;
 };
+
+// historcal charts
+// const getCountryHistoricalData = () => {
+// 	fetch("https://disease.sh/v3/covid-19/historical?lastdays=7")
+// 		.then((Response) => {
+// 			return Response.json();
+// 		})
+// 		.then((info_ch) => {
+// 			showStatesDataOnMap(info_ch);
+// 			showChartDataInTable(info_ch);
+// 			console.log(info_ch);
+// 		});
+// };
+
+// const showChartDataInTable(info_ch);
+// const showChartDataInTable = (info_ch) => {
+// 	var hchart = info_ch.map(function (table) {
+// 		return {
+// 			// Stat: table.state,
+// 			Cases: table.timeline.cases,
+// 			// Deaths: table.deaths,
+// 			// Recovered: table.stats.recovered,
+// 		};
+// 	});
+// 	console.log(hchart.length);
+// 	var a = hchart[1];
+// 	console.log(a);
+// };
+
+// const test = (hchart) => {
+// 	hcchart.forEach((elt) => {
+// 		const hchart = elt.split(":");
+
+// 	});
+
+// };
+// const changeDataSelection = (casesType) => {
+// 	setSelectedTab(casesType);
+// 	changeMapTitle(casesType);
+// 	clearTheMap();
+// 	showDataOnMap(coronaGlobalData, casesType);
+// }
+const getWorldCoronaData = () => {
+	fetch("https://disease.sh/v3/covid-19/all")
+		.then((response) => {
+			return response.json();
+		})
+		.then((dataPia) => {
+			buildPieChart(dataPia);
+		});
+};
+const buildPieChart = (dataPia) => {
+	var ctx = document.getElementById("worldPieChart").getContext("2d");
+	var myPieChart = new Chart(ctx, {
+		type: "pie",
+		data: {
+			datasets: [
+				{
+					data: [dataPia.cases, dataPia.recovered, dataPia.deaths],
+					backgroundColor: ["#e53e3e", "#38a169", "#718096"],
+				},
+			],
+			labels: ["Active", "Recovered", "Deaths"],
+		},
+		options: { responsive: true, maintainAspectRatio: false },
+	});
+};
+
+// const getUSACoronaData = () => {
+// 	fetch("https://api.covid19api.com/stats")
+// 		.then((response) => {
+// 			return response.json();
+// 		})
+// 		.then((dataPiaUSA) => {
+// 			buildUSAPieChart(dataPiaUSA);
+// 		});
+// };
+// const buildUSAPieChart = (dataPiaUSA) => {
+// 	var ctx = document.getElementById("USAPieChart").getContext("2d");
+// 	var myUSAPieChart = new Chart(ctx, {
+// 		type: "pie",
+// 		data: {
+// 			datasets: [
+// 				{
+// 					data: [dataPiaUSA.cases, dataPiaUSA.recovered, dataPiaUSA.deaths],
+// 					backgroundColor: ["#e53e3e", "#38a169", "#718096"],
+// 				},
+// 			],
+// 			labels: ["Active", "Recovered", "Deaths"],
+// 		},
+// 		options: { responsive: true, maintainAspectRatio: false },
+// 	});
+// };

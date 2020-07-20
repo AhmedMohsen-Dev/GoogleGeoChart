@@ -44,6 +44,7 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
 		<script src="./metros.js"></script>
 
@@ -85,19 +86,6 @@
 							</li>
 							<li class="nav-item">
 								<a class="nav-link m-2 text-capitalize" href="#USA">US Map</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link m-2 text-capitalize" href="#projects"
-									>Videos</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link m-2 text-capitalize" href="#posts">posts</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link m-2 text-capitalize" href="#reviews"
-									>reviews</a
-								>
 							</li>
 						</ul>
 						<form>
@@ -169,22 +157,30 @@
 							<div id="Country_div"></div>
 						</div>
 					</div>
-					<div class="col-lg-12 mt-5">
-						<div class="card">
-							<div class="cases-table-container">
-								<h4>Live Cases by Countries</h4>
-								<div class="country-data d-flex">
-									<table class="table table-striped">
-										<thead>
-											<tr>
-												<th class="table-info" scope="col">Country</th>
-												<th scope="col">Total Cases</th>
-												<th scope="col">Total Recovered</th>
-												<th scope="col">Total Deaths</th>
-											</tr>
-										</thead>
-										<tbody id="Country-table-data"></tbody>
-									</table>
+					<hr />
+					<div class="row justify-content-between">
+						<div class="col-lg-6 align-items-center">
+							<div class="card_chart align-items-center">
+								<canvas id="worldPieChart"></canvas>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="cases-table-container">
+									<h4>Live Cases by Countries</h4>
+									<div class="country-data d-flex">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th class="table-info" scope="col">Country</th>
+													<th scope="col">Total Cases</th>
+													<th scope="col">Total Recovered</th>
+													<th scope="col">Total Deaths</th>
+												</tr>
+											</thead>
+											<tbody id="Country-table-data"></tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -242,21 +238,29 @@
 							<div id="States_div"></div>
 						</div>
 					</div>
-					<div class="col-lg-12 mt-2">
-						<div class="card">
-							<div class="cases-table-container">
-								<h4>Live Cases by States</h4>
-								<div class="country-data">
-									<table class="table table-striped">
-										<thead>
-											<tr>
-												<th class="table-info" scope="col">State</th>
-												<th scope="col">Cases</th>
-												<th scope="col">Deaths</th>
-											</tr>
-										</thead>
-										<tbody id="States-table-data"></tbody>
-									</table>
+					<hr />
+					<div class="row justify-content-between">
+						<div class="col-lg-6 align-items-center">
+							<div class="card_chart align-items-center">
+								<canvas id="USAPieChart"></canvas>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="cases-table-container">
+									<h4>Live Cases by States</h4>
+									<div class="country-data">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th class="table-info" scope="col">State</th>
+													<th scope="col">Cases</th>
+													<th scope="col">Deaths</th>
+												</tr>
+											</thead>
+											<tbody id="States-table-data"></tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
